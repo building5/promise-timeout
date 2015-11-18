@@ -61,3 +61,5 @@ pt.timeout(somePromise, 1000)
     }
   });
 ```
+
+ [es6-promise]: https://www.npmjs.com/package/es6-promise
