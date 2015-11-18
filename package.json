@@ -1,14 +1,14 @@
 {
   "name": "promise-timeout",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple timeouts for promises",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["promise", "timeout"],
+  "author": "David M. Lee, II <leedm777@yahoo.com>",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^2.3.4"
   }
