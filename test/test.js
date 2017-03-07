@@ -23,11 +23,20 @@ describe('promise-timeout', function() {
   });
 
   describe('a fast promise', function() {
-    it('should resolve', function() {
-      return pt.timeout(later(10), 1000)
-        .then(function() {
+    it('should resolve with correct value', function() {
+      return pt.timeout(Promise.resolve('some value'), 1000)
+        .then(function(val) {
+          assert.equal(val, 'some value');
         }, function(err) {
           assert.fail('should have resolved');
+        });
+    });
+    it('should reject with correct exception', function() {
+      return pt.timeout(Promise.reject(new Error('some error')), 1000)
+        .then(function(val) {
+          assert.fail('should have rejected');
+        }, function(err) {
+          assert.equal(err.message, 'some error');
         });
     });
   });

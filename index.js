@@ -1,4 +1,4 @@
-// Copyright (c) 2015 David M. Lee, II
+// Copyright (c) 2015-2017 David M. Lee, II
 'use strict';
 
 /**
@@ -20,12 +20,20 @@ require('util').inherits(TimeoutError, Error);
  * @param {number} timeoutMillis Number of milliseconds to wait on settling.
  */
 module.exports.timeout = function(promise, timeoutMillis) {
+  let timeout;
+
   return Promise.race([
     promise,
     new Promise(function(resolve, reject) {
-      setTimeout(function() {
+      timeout = setTimeout(function() {
         reject(new TimeoutError());
       }, timeoutMillis);
-    })
-  ]);
+    }),
+  ]).then(function(v) {
+    clearTimeout(timeout);
+    return v;
+  }, function(err) {
+    clearTimeout(timeout);
+    throw err;
+  });
 };
