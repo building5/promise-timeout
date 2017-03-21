@@ -1,5 +1,9 @@
 # promise-timeout
 
+## v1.1.1 (2017-03-21)
+
+ * #2 - Change `let` to `var` for ES5 compatibility. Thanks, @mateuscalza!
+
 ## v1.1.0 (2017-03-07)
 
  * Updated mocha.
