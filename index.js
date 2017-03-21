@@ -20,7 +20,7 @@ require('util').inherits(TimeoutError, Error);
  * @param {number} timeoutMillis Number of milliseconds to wait on settling.
  */
 module.exports.timeout = function(promise, timeoutMillis) {
-  let timeout;
+  var timeout;
 
   return Promise.race([
     promise,
