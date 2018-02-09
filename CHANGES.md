@@ -3,6 +3,7 @@
 ## v1.2.0 (2018-02-08)
 
  * #4 - Improve the stack trace for TimeoutExceptions. Thanks, @tekwiz!
+ * Add JsDoc for return value. Thanks again, @tekwiz!
 
 ## v1.1.1 (2017-03-21)
 
