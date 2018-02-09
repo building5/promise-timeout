@@ -13,6 +13,8 @@ var TimeoutError;
  *
  * @param {Promise} promise The promise.
  * @param {number} timeoutMillis Number of milliseconds to wait on settling.
+ * @returns {Promise} Either resolves/rejects with `promise`, or rejects with
+ *                   `TimeoutError`, whichever settles first.
  */
 var timeout = module.exports.timeout = function(promise, timeoutMillis) {
   var error = new TimeoutError(),
