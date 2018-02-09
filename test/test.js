@@ -20,7 +20,16 @@ describe('promise-timeout', function() {
           assert(err instanceof pt.TimeoutError);
         });
     });
-  });
+
+    it('have a decent stack trace', function() {
+      return pt.timeout(later(1000), 10)
+        .then(function() {
+          assert.fail('should not have resolved');
+        }, function(err) {
+          assert(err.stack.includes('test.js'));
+        });
+    });
+});
 
   describe('a fast promise', function() {
     it('should resolve with correct value', function() {

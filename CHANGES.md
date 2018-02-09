@@ -1,5 +1,9 @@
 # promise-timeout
 
+## v1.2.0 (2018-02-08)
+
+ * #4 - Improve the stack trace for TimeoutExceptions. Thanks, @tekwiz!
+
 ## v1.1.1 (2017-03-21)
 
  * #2 - Change `let` to `var` for ES5 compatibility. Thanks, @mateuscalza!
