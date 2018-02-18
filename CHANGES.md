@@ -1,5 +1,9 @@
 # promise-timeout
 
+## v1.3.0 (2018-02-18)
+
+ * #3 - Make promise-timeout more portable
+
 ## v1.2.0 (2018-02-08)
 
  * #4 - Improve the stack trace for TimeoutExceptions. Thanks, @tekwiz!

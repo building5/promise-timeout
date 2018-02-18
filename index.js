@@ -41,8 +41,9 @@ var timeout = module.exports.timeout = function(promise, timeoutMillis) {
  */
 TimeoutError = module.exports.TimeoutError = function() {
   Error.call(this)
-  Error.captureStackTrace(this, timeout);
+  this.stack = Error().stack
   this.message = 'Timeout';
 };
 
-require('util').inherits(TimeoutError, Error);
+TimeoutError.prototype = Object.create(Error.prototype);
+TimeoutError.prototype.name = "TimeoutError";
