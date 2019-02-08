@@ -1,5 +1,9 @@
 # promise-timeout
 
+## vNEXT
+
+ * Updated mocha. Addresses some security vulnerabilities.
+
 ## v1.3.0 (2018-02-18)
 
  * #3 - Make promise-timeout more portable

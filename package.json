@@ -17,6 +17,6 @@
     "url": "https://github.com/building5/promise-timeout.git"
   },
   "devDependencies": {
-    "mocha": "^3.2.0"
+    "mocha": "^5.2.0"
   }
 }
